@@ -139,7 +139,7 @@ if classifier == "Random Forest Classifier":
 
     if st.sidebar.button("Classify"):
         st.subheader("rf_clf")
-        rf_clfl = RandomForestClassifier(n_estimators = n_estimators_input,max_depth = max_depth_input,n_jobs  = -1)
+        rf_clf = RandomForestClassifier(n_estimators = n_estimators_input,max_depth = max_depth_input,n_jobs  = -1)
         rf_clf.fit(X_train, y_train)
         score_rf_clf = rf_clf.score(X_test, y_test)
         glass_type = prediction(rf_clf, ri, na, mg, al, si, k, ca, ba, fe)
