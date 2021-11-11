@@ -124,7 +124,7 @@ if classifier == "Support Vector Machine":
 
     if st.sidebar.button("Classify"):
         st.subheader("svc_model")
-        svc_model = SVC(kernel = kernal_input,gamma = gamma_input,C = c)
+        svc_model = SVC(kernel = kernel_input,gamma = gamma_input,C = c)
         svc_model.fit(X_train, y_train)
         score_svc = svc_model.score(X_test, y_test)
         glass_type = prediction(svc_model, ri, na, mg, al, si, k, ca, ba, fe)
